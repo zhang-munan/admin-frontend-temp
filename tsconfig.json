@@ -1,0 +1,43 @@
+{
+  /* 开始编译器选项的配置部分 */
+  "compilerOptions": {
+    /* 设置编译目标为 ECMAScript 2020，编译后的 JavaScript 代码将按照这个目标版本进行转换。 */
+    "target": "ES2020",
+    /* 启用类字段的显式定义语法（TypeScript 类中字段的定义）。 */
+    "useDefineForClassFields": true,
+    /* 使用 ES Modules 进行模块化，通过导入和导出语法来管理代码模块。 */
+    "module": "ESNext",
+    /* 指定要包含的类型库，包括 ECMAScript 2020、DOM 和 DOM.Iterable。 */
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    /* 跳过对声明文件的类型检查，可以提高编译速度。 */
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    /* 使用捆绑器模块解析策略，将模块解析交给捆绑器（如 Webpack）处理。 */
+    "moduleResolution": "bundler",
+    /* 允许导入 TypeScript 扩展名（.ts 和 .tsx）的模块。 */
+    "allowImportingTsExtensions": true,
+    /* 允许导入 JSON 文件作为模块。 */
+    "resolveJsonModule": true,
+    /* 将每个文件视为独立的模块，可以提高编译速度。 */
+    "isolatedModules": true,
+    /* 不生成编译后的输出文件（JavaScript 文件）。 */
+    "noEmit": true,
+    /* 保留 JSX 代码不进行转换。 */
+    "jsx": "preserve",
+
+    /* Linting */
+    /* 启用严格模式，开启多个严格类型检查选项。 */
+    "strict": true,
+    /* 检查是否存在未使用的局部变量。 */
+    "noUnusedLocals": true,
+    /* 检查是否存在未使用的函数参数。 */
+    "noUnusedParameters": true,
+    /* 在 switch 语句中检查是否遗漏了 break 或 return 语句。 */
+    "noFallthroughCasesInSwitch": true
+  },
+  /* 指定要包含的源代码文件，包括 TypeScript、TypeScript 声明文件、TypeScript JSX 和 Vue 单文件组件。 */
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  /* 指定了另一个 TypeScript 配置文件的路径，该配置文件会被引用作为项目引用。这可以用于在一个 TypeScript 项目中引用另一个 TypeScript 项目。 */
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
